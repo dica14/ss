@@ -1,0 +1,41 @@
+TABLE
+NUM    NAME           SECTION   LOCAL     VALUE     SIZE           
+0      UND            0         false     0         0              
+1      a              7         true      23        0              
+2      c              10        true      0         0              
+3      b              0         true      0         0              
+4      .text          4         false     0         21             
+5      d              4         false     16        0              
+6      .text.prvideo  6         false     0         24             
+7      .data          7         false     0         32             
+8      e              7         false     8         0              
+10     .bss           10        false     0         0              
+
+#rel.text
+OFFSET	TYPE		REFF
+10	R_386_32H	4
+14	R_386_32L	4
+
+#rel.text.prvideo
+OFFSET	TYPE		REFF
+
+#rel.data
+OFFSET	TYPE		REFF
+14	R_386_32_MINUS	1
+14	R_386_32_PLUS	3
+14	R_386_32_MINUS	2
+14	R_386_32_PLUS	4
+
+#.text
+ec 00 00 00 ec 80 00 04 0f 20 00 10 
+0f 28 00 00 ee 6b c0 00 00 
+
+#.text.prvideo
+b1 74 00 0a e7 01 c0 00 ed aa 80 00 
+ee 0b c0 00 e1 0c 04 56 ee 08 8b 00 
+
+
+#.data
+00 00 00 00 00 00 00 00 18 00 2e 00 
+34 00 66 00 00 00 00 00 00 00 00 0f 
+0f 0f 0f 0f 0f 0f 0f 0f 

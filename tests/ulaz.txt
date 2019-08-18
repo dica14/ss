@@ -1,0 +1,25 @@
+.public a, c
+.extern b
+.text
+	call	r0, 0
+	call	d
+	ldceq 	r2,d
+	mov r13, r15
+	d: 	.skip	05 ;bfusjfbsnik
+.text.prvideo
+	addles r14, 0b01010
+	or r15, r3
+	in r10, r10
+	mov 	r1, r15
+	add r1, 0x456
+	shl r1, r2, 0b00101
+.data
+.skip 	8
+e:	.word	0x18,056,52
+	.long	-a+b-c+d+0x56
+	.skip	5 
+a:	.align 	16, 0xf, 32
+.bss
+c:	.skip 	8
+.end
+
